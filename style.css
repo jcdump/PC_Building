@@ -25,6 +25,7 @@ body {
   background-color: var(--color-background);
 }
 
+/* General styles */
 .logo {
   color: var(--color-white);
   font-size: 32px;
@@ -40,6 +41,7 @@ body {
   padding: 0;
   position: sticky;
   top: 0;
+  z-index: 1; /* Ensure the menu bar is above other content */
 }
 
 .menu-bar ul {
@@ -78,6 +80,7 @@ body {
   left: 0;
   top: 100%;
   background-color: var(--color-dark);
+  z-index: 2; /* Ensure the dropdown menu is above the header content */
 }
 
 .menu-bar ul li:hover .dropdown-menu {
@@ -90,44 +93,115 @@ body {
 
 .menu-bar ul li:hover .dropdown-menu ul li {
   width: 150px;
-  height: 100%;
   padding: 1px;
 }
 
-h1 {
+h1{
   color: var(--color-white);
-  font-size: 34px;
-  text-align: left;
   margin-left: 20px;
-  
+  font-size: 36px;
 }
 
-header{
+header {
   background-color: #000606;
-  padding-bottom: 43px;
-}
-
-header img{
-  display: block;
-  width: 100%;
-  margin: auto;
-}
-
-header p {
-  color: var(--color-offwhite-dark);
-  text-align: left;
-  font-size: 20px;
+  height: auto; /* Allow header to adjust height based on content */
+  position: relative; /* Needed for absolute positioning inside */
+  padding-bottom: 46px;
 }
 
 .header-para {
-  position: absolute;
-  top: 92px;
-  left: 0%;
-  transform: translate(0%, 0%);
-  max-width: 600px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.0);  
+  position: relative;
+  text-align: left;
+  font-size: 20px;
+  color: var(--color-offwhite-dark);
+  margin-left: 20px;
 }
+
+.top-text {
+  position: absolute;
+  width: 600px;
+  top: 20px;
+  left: 20px; /* Adjusted to hug the left side */
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
+  
+  .menu-bar {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .menu-bar ul {
+    flex-direction: column;
+  }
+  
+  .menu-bar ul li {
+    text-align: left;
+    padding: 10px 20px;
+  }
+  
+  .menu-bar ul li a {
+    width: auto;
+    height: auto;
+    font-size: 18px;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background-color: var(--color-dark);
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: static;
+    background-color: var(--color-dark);
+    z-index: 2; /* Ensure the dropdown menu is above the header content */
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+  }
+  
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 100%;
+    padding: 5px 10px;
+  }
+
+  h1{
+    color: var(--color-white);
+    margin-left: 20px;
+    font-size: 26px;
+  }
+  
+  header {
+    background-color: #000606;
+    height: auto; /* Allow header to adjust height based on content */
+    position: relative; /* Needed for absolute positioning inside */
+    padding-bottom: 46px;
+  }
+  
+  .header-para {
+    position: relative;
+    text-align: left;
+    font-size: 16px;
+    color: var(--color-offwhite-dark);
+    margin-left: 20px;
+  }
+  
+  .top-text {
+    position: absolute;
+    width: 600px;
+    top: 5px;
+    left: 5px; /* Adjusted to hug the left side */
+  }
+}
+
 
 main {
   text-align: left;
