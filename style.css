@@ -27,7 +27,7 @@ body {
 
 .logo {
   color: var(--color-white);
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .menu-bar {
@@ -107,7 +107,9 @@ header{
 
 header img{
   display: block;
+  width: 100%;
   margin: auto;
+  min-height: 150px;
 }
 
 header p {
