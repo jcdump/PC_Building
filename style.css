@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+  --color-primary: #436674;
+  --color-white: #ffffff;
+  --color-offwhite: #fff1e8;
+  --color-offwhite-dark: #ffd3b9;
+  --color-dark: #18252bad;
+  --color-primary-dark: #d7f9ffad;
+  --color-background: #464e52;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Abel', monospace;
+  background-color: var(--color-background);
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 40px;
+}
+
+.menu-bar {
+  background-color: var(--color-dark);
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-bar ul li {
+  position: relative;
+  text-align: center;
+}
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.1s, color 0.1s;
+  display: block;
+  width: 100%; /* Make anchor tag full width */
+  height: 100%; /* Make anchor tag full height */
+  padding: 10px 30px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.menu-bar ul li a:hover {
+  background-color: var(--color-primary-dark); /* Change entire background */
+  color: var(--color-primary);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-dark);
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  height: 100%;
+  padding: 1px;
+}
+
+h1 {
+  color: var(--color-white);
+  font-size: 34px;
+  text-align: left;
+  
+}
+
+header p {
+  color: var(--color-offwhite-dark);
+  text-align: left;
+  font-size: 20px;
+}
+
+.header-para {
+  position: absolute;
+  top: 92px;
+  left: 0%;
+  transform: translate(0%, 0%);
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.0);  
+}
+
+main {
+  text-align: left;
+  margin-left: 20px;
+}
+
+h2 {
+  color: var(--color-white);
+  font-size: 32px;
+}
+
+h3 {
+  color: var(--color-offwhite);
+  font-size: 26px;
+  
+}
+
+main p, main ul li, dl, dd {
+  color: var(--color-offwhite-dark);
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column3, .column2 {
+  flex: 1;
+  padding: 5px;
+  max-width: calc(33.33% - 10px);
+  width: 100%;
+}
+
+.column2 {
+  max-width: calc(50% - 10px);
+}
+
+.column3 img, .column2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.column3 figure, .column2 figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: thin solid var(--color-offwhite); /* Figure outline */
+  padding: 2px;
+  margin: auto;
+}
+
+figcaption {
+  font-family: 'Abel', monospace;
+  font-size: 20px;
+  color: var(--color-offwhite);
+  padding: 3px;
+  text-align: center;
+}
+
+dl{
+  color: var(--color-offwhite-dark);
+  font-size: 20px;
+  
+}
