@@ -101,6 +101,15 @@ h1 {
   
 }
 
+header{
+  background-color: #000606;
+}
+
+header img{
+  display: block;
+  margin: auto;
+}
+
 header p {
   color: var(--color-offwhite-dark);
   text-align: left;
