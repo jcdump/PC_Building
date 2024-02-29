@@ -98,18 +98,19 @@ h1 {
   color: var(--color-white);
   font-size: 34px;
   text-align: left;
+  margin-left: 20px;
   
 }
 
 header{
   background-color: #000606;
+  padding-bottom: 43px;
 }
 
 header img{
   display: block;
   width: 100%;
   margin: auto;
-  min-height: 150px;
 }
 
 header p {
