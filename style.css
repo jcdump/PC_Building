@@ -247,6 +247,12 @@ main p, main ul li, dl, dd {
   margin-left: 20px;
 }
 
+.case-category {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5px;
+}
+
 .image-row {
   display: flex;
   flex-wrap: wrap;
